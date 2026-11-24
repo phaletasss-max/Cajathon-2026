@@ -1,0 +1,30 @@
+{
+  "difficulty": "medium",
+  "seed": 42,
+  "n_legit_persons": 5000,
+  "n_rings": 25,
+  "n_ring_persons": 237,
+  "n_ring_applications": 261,
+  "prevalence_rings_per_1000_persons": 5.0,
+  "ring_type_counts": {
+    "application_burst": 5,
+    "rotating_phone": 5,
+    "impossible_locations": 5,
+    "device_farm": 5,
+    "circular_references": 5
+  },
+  "ring_type_application_counts": {
+    "application_burst": 79,
+    "impossible_locations": 61,
+    "device_farm": 49,
+    "circular_references": 38,
+    "rotating_phone": 34
+  },
+  "difficulty_config": {
+    "cover_probability": 0.24,
+    "noise_rate": 0.0,
+    "burst_window_hours": 72,
+    "burst_noise_rate": 0.0,
+    "cycle_noise_rate": 0.0
+  }
+}

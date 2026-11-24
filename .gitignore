@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+data/raw/*.csv
+data/ground_truth/*.csv
+data_lowprev/
+outputs/*
+!outputs/.gitkeep
+!data/raw/.gitkeep
+!data/ground_truth/.gitkeep

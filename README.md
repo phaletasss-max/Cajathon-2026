@@ -4,8 +4,8 @@ Prototipo para el hackathon Cajathon de Caja Trujillo. Identifica **relaciones
 inusuales** entre personas, negocios y solicitudes para **priorizar revisión
 humana**. No determina fraude, no rechaza créditos y no decide automáticamente.
 
-> **Fases 1–7 entregadas:** generador, grafo, detección, expedientes, revisión
-> humana, API HTTP e interfaz Streamlit.
+> **Fases 1–8 entregadas:** generador, grafo, detección, expedientes, revisión
+> humana, API HTTP, interfaz Streamlit y benchmark por dificultad.
 
 ## Datos
 
@@ -207,6 +207,24 @@ streamlit run ui/app.py
 La interfaz muestra redes detectadas, expedientes, solicitudes en riesgo y
 permite registrar decisiones humanas (`confirmado`, `descartado`,
 `falso_positivo`) con revisor y notas.
+
+## Fase 8 — Evaluación y benchmark
+
+```bash
+python -m eval.benchmark --n-legit 2000 --seed 42 --output outputs/benchmark
+```
+
+Genera `outputs/benchmark/benchmark.json` y `report.md` con AP, AUC, clusters
+y anillos capturados para `easy`, `medium`, `hard` y baja prevalencia.
+
+Resultados de referencia (1.000 personas):
+
+| Escenario | AP | AUC | Anillos capturados |
+|---|---:|---:|---:|
+| easy | 1,0000 | 1,0000 | 43/43 |
+| medium | 1,0000 | 1,0000 | 46/46 |
+| hard | 0,8226 | 0,8393 | 38/47 |
+| hard (baja prevalencia) | 0,8226 | 0,8393 | 38/47 |
 
 ## Pruebas
 

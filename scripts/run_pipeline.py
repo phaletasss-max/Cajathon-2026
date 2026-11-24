@@ -29,14 +29,16 @@ def run_pipeline(
     seed: int = 42,
     difficulty: str = "medium",
     out_data: Path | None = None,
+    out_outputs: Path | None = None,
 ) -> dict[str, object]:
     started = time.perf_counter()
     out_data = out_data or Path("data")
+    out_outputs = out_outputs or Path("outputs")
     raw_dir = out_data / "raw"
-    graph_dir = Path("outputs/graph")
-    detection_dir = Path("outputs/detection")
-    explain_dir = Path("outputs/explain")
-    eval_dir = Path("outputs/eval")
+    graph_dir = out_outputs / "graph"
+    detection_dir = out_outputs / "detection"
+    explain_dir = out_outputs / "explain"
+    eval_dir = out_outputs / "eval"
 
     generate_dataset(n_legit=n_legit, n_rings=n_rings, seed=seed, out_dir=out_data, difficulty=difficulty)
     graph_result = build_graph_from_dir(raw_dir)
@@ -70,8 +72,9 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--difficulty", choices=["easy", "medium", "hard"], default="medium")
     parser.add_argument("--out-data", type=Path, default=Path("data"))
+    parser.add_argument("--out-outputs", type=Path, default=Path("outputs"))
     args = parser.parse_args(argv)
-    run_pipeline(args.n_legit, args.rings, args.seed, args.difficulty, args.out_data)
+    run_pipeline(args.n_legit, args.rings, args.seed, args.difficulty, args.out_data, args.out_outputs)
     return 0
 
 

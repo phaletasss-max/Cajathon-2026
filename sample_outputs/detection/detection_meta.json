@@ -1,0 +1,23 @@
+{
+  "schema_version": "3.0",
+  "config": {
+    "threshold": 60.0,
+    "resolution": 1.0,
+    "min_cluster_size": 2,
+    "max_cluster_size": 60,
+    "seed": 42
+  },
+  "stats": {
+    "n_applications": 346,
+    "n_clusters": 5,
+    "n_risk_applications": 46,
+    "n_clustered_applications": 46,
+    "threshold": 60.0,
+    "resolution": 1.0,
+    "elapsed_seconds": 0.2319
+  },
+  "files": {
+    "clusters": "clusters.csv",
+    "application_scores": "application_scores.csv"
+  }
+}

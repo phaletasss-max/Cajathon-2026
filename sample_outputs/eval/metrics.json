@@ -1,0 +1,82 @@
+{
+  "application": {
+    "n_applications": 346,
+    "n_rings": 46,
+    "average_precision": 1.0,
+    "roc_auc": 1.0,
+    "top25_precision": 1.0,
+    "top25_recall": 0.5435,
+    "top25_rings": 25,
+    "top50_precision": 0.92,
+    "top50_recall": 1.0,
+    "top50_rings": 46,
+    "top100_precision": 0.46,
+    "top100_recall": 1.0,
+    "top100_rings": 46,
+    "top200_precision": 0.23,
+    "top200_recall": 1.0,
+    "top200_rings": 46,
+    "top259_precision": 0.1776,
+    "top259_recall": 1.0,
+    "top259_rings": 46
+  },
+  "cluster": {
+    "n_clusters": 5,
+    "n_pure_clusters": 5,
+    "n_clusters_with_rings": 5,
+    "captured_rings": 46,
+    "ring_recall": 1.0,
+    "cluster_details": [
+      {
+        "cluster_id": "C00001",
+        "size": 10,
+        "risk_score": 81.83,
+        "ring_members": 10,
+        "purity": 1.0,
+        "ring_types": [
+          "application_burst"
+        ]
+      },
+      {
+        "cluster_id": "C00002",
+        "size": 7,
+        "risk_score": 75.0,
+        "ring_members": 7,
+        "purity": 1.0,
+        "ring_types": [
+          "circular_references"
+        ]
+      },
+      {
+        "cluster_id": "C00003",
+        "size": 7,
+        "risk_score": 72.62,
+        "ring_members": 7,
+        "purity": 1.0,
+        "ring_types": [
+          "rotating_phone"
+        ]
+      },
+      {
+        "cluster_id": "C00004",
+        "size": 8,
+        "risk_score": 72.07,
+        "ring_members": 8,
+        "purity": 1.0,
+        "ring_types": [
+          "device_farm"
+        ]
+      },
+      {
+        "cluster_id": "C00005",
+        "size": 14,
+        "risk_score": 68.58,
+        "ring_members": 14,
+        "purity": 1.0,
+        "ring_types": [
+          "impossible_locations"
+        ]
+      }
+    ]
+  }
+}

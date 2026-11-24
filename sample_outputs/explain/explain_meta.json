@@ -1,0 +1,10 @@
+{
+  "schema_version": "4.0",
+  "n_dossiers": 5,
+  "top": 5,
+  "files": {
+    "dossiers": "dossiers.json",
+    "risk_register": "risk_register.csv",
+    "markdown": "dossier_C*.md"
+  }
+}

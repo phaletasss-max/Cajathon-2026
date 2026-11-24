@@ -14,7 +14,8 @@ from review.workflow import record_decision
 
 app = FastAPI(title="RIE-02", version="0.3.0", description="Detección de redes de riesgo en microfinanzas")
 
-BASE_DIR = Path("outputs")
+_env = __import__("os").environ.get("RIE_OUTPUT_DIR")
+BASE_DIR = Path(_env) if _env else (Path("outputs") if (Path("outputs") / "detection" / "clusters.csv").exists() else Path("sample_outputs"))
 
 
 def _read_csv(name: str, subdir: str = "") -> pd.DataFrame:

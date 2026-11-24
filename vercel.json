@@ -1,4 +1,0 @@
-{
-  "buildCommand": "python scripts/run_pipeline.py --n-legit 300 --rings 5 --seed 42 --difficulty medium",
-  "outputDirectory": "."
-}

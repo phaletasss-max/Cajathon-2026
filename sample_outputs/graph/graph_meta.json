@@ -1,0 +1,48 @@
+{
+  "schema_version": "2.0",
+  "config": {
+    "max_multiplicity": 25,
+    "weight_caps": {
+      "phone": 8.0,
+      "device": 8.0,
+      "address": 6.0,
+      "reference": 7.0,
+      "geocell": 1.5
+    },
+    "salt": "rie02-fase2",
+    "include_hubs": true
+  },
+  "stats": {
+    "n_applications": 346,
+    "n_persons": 340,
+    "n_businesses": 192,
+    "n_entities": 878,
+    "n_attributes": 1160,
+    "n_high_multiplicity_attributes": 14,
+    "n_bipartite_nodes": 2038,
+    "n_bipartite_edges": 4005,
+    "n_projection_nodes": 360,
+    "n_projection_edges": 1466,
+    "n_projection_hub_edges": 304,
+    "n_projection_application_edges": 1162,
+    "max_multiplicity": 25,
+    "elapsed_seconds": 0.5136
+  },
+  "counts": {
+    "applications": 346,
+    "entities": 878,
+    "attributes": 1160,
+    "bipartite_nodes": 2038,
+    "bipartite_edges": 4005,
+    "projection_nodes": 360,
+    "projection_edges": 1466
+  },
+  "files": {
+    "bipartite_graphml": "graph.graphml",
+    "projection_graphml": "projection.graphml",
+    "pickle": "graph.pkl",
+    "edges_csv": "graph_edges.csv",
+    "nodes_csv": "graph_nodes.csv",
+    "attributes_csv": "graph_attributes.csv"
+  }
+}

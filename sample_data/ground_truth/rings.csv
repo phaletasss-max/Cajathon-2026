@@ -1,0 +1,6 @@
+ring_id,ring_type,cover_pattern,ring_size,n_applications,home_geocell
+d2de2fbed8b4,application_burst,none,10,10,87b20f0f5fdc
+7a15cc72a78c,circular_references,none,7,7,8bceb986968a
+b79a2a0e6f4d,rotating_phone,none,7,7,e6a1033844ea
+03b7d6d56c45,impossible_locations,none,8,14,54775ecbe3c8
+b2fcd1aa63bd,device_farm,none,8,8,54775ecbe3c8

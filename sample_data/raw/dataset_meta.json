@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "seed": 42,
+  "difficulty": "medium",
+  "n_legit_persons_requested": 300,
+  "n_rings_requested": 5,
+  "prevalence_rings_per_1000_persons": 16.667,
+  "ring_types": [
+    "device_farm",
+    "rotating_phone",
+    "circular_references",
+    "application_burst",
+    "impossible_locations"
+  ],
+  "counts": {
+    "persons": 340,
+    "businesses": 192,
+    "addresses": 221,
+    "phones": 373,
+    "devices": 342,
+    "applications": 346,
+    "references": 619,
+    "geocells": 22
+  },
+  "n_ring_persons": 40,
+  "n_ring_applications": 46,
+  "privacy": "100% datos sintéticos; sin PII real; IDs opacos"
+}

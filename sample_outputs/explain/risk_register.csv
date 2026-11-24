@@ -1,0 +1,6 @@
+cluster_id,risk_score,size,summary,members,file
+C00001,81.83,10,Ráfaga temporal: 10 solicitudes en <=72 h con dirección compartida,10,dossier_C00001.md
+C00002,75.0,7,Ciclo cerrado de referencias entre 7 personas,7,dossier_C00002.md
+C00003,72.62,7,Teléfono compartido en 21 aristas,7,dossier_C00003.md
+C00004,72.07,8,Dispositivo compartido en 12 aristas,8,dossier_C00004.md
+C00005,68.58,14,Dispositivo compartido en 6 aristas,14,dossier_C00005.md

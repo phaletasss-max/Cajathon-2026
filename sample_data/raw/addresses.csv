@@ -1,0 +1,222 @@
+address_id,address_type,street,district,province,department,geocell_id,latitude,longitude
+27980f508b5f,vivienda,Av. Indoamérica 1573,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.072085,-79.005379
+e99d69c9101f,vivienda,Jr. Sucre 953,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.052898,-78.996215
+f0cda0d2e22c,vivienda,Jr. La Libertad 1757,Otuzco,Otuzco,La Libertad,dbf65a307667,-7.933474,-78.597187
+43f0a57726fd,vivienda,Av. Los Andes 929,Santiago de Chuco,Santiago de Chuco,La Libertad,8be0a813f051,-8.124086,-78.161415
+d5a664e5e69d,vivienda,Av. Túpac Amaru 792,Comas,Lima,Lima,87779b42b12e,-11.973737,-77.07975
+fb5475c8143b,vivienda,Calle Huaca del Sol 1321,Moche,Trujillo,La Libertad,8bceb986968a,-8.148292,-79.006185
+e58192a279fe,vivienda,Av. Almagro 763,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.121523,-79.00851
+6c0e018236cb,vivienda,Av. Nicolás de Piérola 1841,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.078549,-79.019261
+e582cc9c005a,vivienda,Calle Micaela Bastidas 1007,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.078074,-79.057228
+34ed721ddd3c,vivienda,Calle La Libertad 1063,Virú,Virú,La Libertad,814b32ca3d8b,-8.394201,-78.744663
+966385558cce,vivienda,Jr. Los Cedros 1109,Víctor Larco Herrera,Trujillo,La Libertad,440e1c64c2df,-8.138924,-79.073356
+fb6c9b702240,vivienda,Malecón Salaverry 828,Salaverry,Trujillo,La Libertad,e87377f7ccae,-8.211687,-79.0117
+89e0f7d4b289,vivienda,Av. Mansiche 231,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.130412,-79.015124
+b72156e92d0a,vivienda,Calle El Boquerón 248,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.081701,-79.097794
+77c081cff255,vivienda,Av. Húsares de Junín 405,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.123287,-79.030538
+5a724cd688eb,comercial,Calle Lima 250,Piura,Piura,Piura,c22404a23524,-5.168608,-80.641513
+2dbf401c5f74,vivienda,Av. Virú 786,Virú,Virú,La Libertad,814b32ca3d8b,-8.432886,-78.722951
+218c4c1ce819,vivienda,Av. Larco 1485,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.127348,-79.048075
+7d325f4fcebb,vivienda,Calle San Agustín 437,Huamachuco,Sánchez Carrión,La Libertad,760aeddf19c4,-7.793503,-78.065433
+f1bb5031fa27,vivienda,Av. Húsares de Junín 1922,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.081485,-79.049088
+5c2e01ea0be8,vivienda,Jr. Pizarro 1089,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.098688,-79.005002
+afc7c2e1e158,comercial,Calle Los Laureles 313,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.050934,-79.031318
+46a3302dd4e5,vivienda,Jr. Lima 1369,Pacasmayo,Pacasmayo,La Libertad,4ac75acc81a8,-7.408467,-79.588713
+66fde96ee462,vivienda,Jr. Santa Rosa 1589,Laredo,Trujillo,La Libertad,eabd6d0adfe1,-8.104727,-78.930664
+d42ab54709bb,vivienda,Jr. Túpac Amaru 1452,Chepén,Chepén,La Libertad,fda741b6147e,-7.245853,-79.447176
+da2fa6f1c07b,vivienda,Av. Victor Larco 1539,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.116015,-79.131533
+1053863d222d,vivienda,Av. Progreso 205,Santiago de Chuco,Santiago de Chuco,La Libertad,8be0a813f051,-8.161828,-78.167579
+2c07f1227bc2,comercial,Jr. Sucre 338,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.054649,-79.018755
+555d71c65cba,vivienda,Av. Gonzales Cáceres 1574,Chepén,Chepén,La Libertad,fda741b6147e,-7.245186,-79.446326
+fb6c3b471b1b,vivienda,Calle San Agustín 1409,Huamachuco,Sánchez Carrión,La Libertad,760aeddf19c4,-7.827021,-78.031829
+58c332993be9,vivienda,Calle Los Laureles 160,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.089113,-79.045979
+27d1ea128b7c,vivienda,Av. Larco 1818,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.130882,-79.041392
+bb0100acea5e,comercial,Mercado de Pacasmayo,Pacasmayo,Pacasmayo,La Libertad,4ac75acc81a8,-7.412081,-79.556551
+2b6ab6d8e100,vivienda,Av. Indoamérica 1740,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.044503,-79.062782
+d588ea24886f,comercial,Calle La Unión 1465,Laredo,Trujillo,La Libertad,eabd6d0adfe1,-8.085126,-78.964712
+bc86c0388e71,vivienda,Av. Primavera 323,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.037436,-79.014257
+7729ef1c559e,vivienda,Calle La Unión 917,Laredo,Trujillo,La Libertad,eabd6d0adfe1,-8.066009,-78.95501
+4855ecf23aa2,vivienda,Av. Prolongación Unión 1521,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.078761,-78.952254
+f89b994977dd,comercial,Calle Lima 1037,Piura,Piura,Piura,c22404a23524,-5.197651,-80.640687
+4ae8bbc65015,vivienda,Av. Chiclayo 189,Chiclayo,Chiclayo,Lambayeque,61da1bf96283,-6.767609,-79.848568
+fcd00793105d,vivienda,Calle Los Ángeles 1237,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.103009,-79.003104
+56f3b158c0ed,vivienda,Calle Los Laureles 1560,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.047648,-79.047623
+1b366577f0f5,vivienda,Calle Comercio 104,Ascope,Ascope,La Libertad,bd3feb573c75,-7.743718,-79.098548
+5d459e576ad2,vivienda,Calle San Pedro 1811,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.065934,-79.007078
+fa9f51a71c56,comercial,Jr. Pizarro 1350,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.109984,-79.034858
+758babdc7e36,vivienda,Jr. Los Álamos 1089,Comas,Lima,Lima,87779b42b12e,-11.94681,-77.040066
+4917134de557,vivienda,Av. La Esperanza 639,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.074999,-79.055239
+bdf3cb9d6394,comercial,Av. Húsares de Junín 1318,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.089354,-79.056257
+6541b53e8815,comercial,Jr. Lima 1501,Pacasmayo,Pacasmayo,La Libertad,4ac75acc81a8,-7.383345,-79.573559
+2ce364eb09b7,vivienda,Av. España 1872,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.124579,-79.03213
+92c017d7bf70,vivienda,Av. Primavera 740,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.07254,-79.013132
+8b11880455cd,vivienda,Av. Prolongación Unión 257,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.078366,-79.018018
+00929914cccc,comercial,Av. Húsares de Junín 1610,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.129896,-79.055751
+11f0be339103,vivienda,Calle Huaca de la Luna 590,Moche,Trujillo,La Libertad,8bceb986968a,-8.182686,-79.027354
+820a9b1501bd,vivienda,Jr. Los Pescadores 1113,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.113856,-79.107753
+7fe834c5e23f,vivienda,Av. La Marina 1610,Pacasmayo,Pacasmayo,La Libertad,4ac75acc81a8,-7.373017,-79.580044
+af6a3b747065,vivienda,Calle San Pedro 242,Pacasmayo,Pacasmayo,La Libertad,4ac75acc81a8,-7.374681,-79.561285
+5b7093028def,comercial,Mercado Central de Trujillo,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.102783,-78.968367
+2da9695b83b2,vivienda,Av. La Esperanza 1799,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.080989,-79.01935
+a45099a8bb52,vivienda,Av. Huamachuco 1809,Huamachuco,Sánchez Carrión,La Libertad,760aeddf19c4,-7.841728,-78.088821
+22c5b13e55b1,vivienda,Jr. Sucre 1745,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.106676,-78.996223
+0473351e3c15,vivienda,Av. Primavera 1972,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.039015,-79.030717
+8a3a47d4cc36,comercial,Jr. La Libertad 1565,Otuzco,Otuzco,La Libertad,dbf65a307667,-7.919713,-78.556666
+0f9df0692441,vivienda,Jr. Pizarro 1605,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.098814,-79.050612
+d28335669a00,vivienda,Av. Primavera 994,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.079118,-78.99999
+4e58912a27ea,vivienda,Av. Primavera 1745,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.047661,-79.017835
+77a111d90f2c,vivienda,Av. Los Andes 1544,Santiago de Chuco,Santiago de Chuco,La Libertad,8be0a813f051,-8.133414,-78.168138
+a780ec7eda69,vivienda,Av. Los Andes 547,Santiago de Chuco,Santiago de Chuco,La Libertad,8be0a813f051,-8.165387,-78.167971
+68acab8085d5,vivienda,Calle San Juan 1312,Comas,Lima,Lima,87779b42b12e,-11.916349,-77.047611
+ba505c6fabce,comercial,Av. Nicolás de Piérola 1918,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.095097,-79.059863
+f87ea58a003b,vivienda,Jr. Los Pescadores 1817,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.081174,-79.1483
+c6ef27699857,vivienda,Jr. Gamarra 540,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.102278,-79.061554
+61eda4bff320,vivienda,Calle Huaca del Sol 102,Moche,Trujillo,La Libertad,8bceb986968a,-8.143423,-79.023503
+5a419cb610b9,vivienda,Av. Prolongación Unión 945,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.081399,-78.954183
+e93061a405b7,vivienda,Av. Almagro 1323,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.080206,-79.02595
+4663bda89d1a,comercial,Jr. Los Pescadores 1657,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.051035,-79.146068
+7364c5ea9e40,vivienda,Calle Micaela Bastidas 1704,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.084684,-79.000482
+37873fae9639,vivienda,Calle Micaela Bastidas 1175,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.03596,-79.028265
+307adff94d00,vivienda,Calle Santa Elena 123,Virú,Virú,La Libertad,814b32ca3d8b,-8.384918,-78.763864
+fd22f4d35825,vivienda,Av. La Esperanza 769,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.095525,-79.047745
+a314ce084aa5,vivienda,Jr. Los Álamos 640,Comas,Lima,Lima,87779b42b12e,-11.939896,-77.053027
+7ccdc5fc7290,vivienda,Av. Victor Larco 1704,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.088203,-79.109073
+af916b7ce4e7,comercial,Jr. Bolognesi 1461,Otuzco,Otuzco,La Libertad,dbf65a307667,-7.889299,-78.601639
+062b4442a32f,vivienda,Av. Primavera 872,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.065029,-79.067382
+551f1dfb16e2,vivienda,Jr. Gamarra 1949,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.107108,-79.059377
+cc0fd13ef194,vivienda,Calle Micaela Bastidas 1186,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.076444,-79.053009
+db929a29f771,vivienda,Calle San Pedro 1880,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.066336,-78.978183
+2e28b52eeb22,vivienda,Av. Primavera 724,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.040194,-79.02314
+0d1aa4802780,comercial,Av. Primavera 1518,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.08894,-79.056025
+3dce39c313be,vivienda,Jr. Túpac Amaru 1473,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.072372,-78.994795
+f392a512d619,vivienda,Jr. Cahuide 1490,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.081897,-79.039686
+5d78c05d351f,vivienda,Av. Prolongación Unión 1667,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.061988,-78.97954
+e79f5c88dffd,comercial,Calle Los Laureles 1291,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.061432,-79.00913
+7aa46e0da7f9,comercial,Calle Los Laureles 132,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.057446,-79.041971
+1b7f27fdfdd7,vivienda,Jr. Independencia 1614,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.132553,-79.024234
+d150bf52c70d,vivienda,Jr. Los Pescadores 880,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.07185,-79.090955
+3c010a10367b,comercial,Mercado de Virú,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.089477,-79.026876
+b91c75e85986,vivienda,Av. Indoamérica 1695,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.095028,-79.001048
+25114194b9a4,vivienda,Calle Las Palmeras 852,Víctor Larco Herrera,Trujillo,La Libertad,440e1c64c2df,-8.151772,-79.059612
+30c39e46ff6e,vivienda,Av. La Esperanza 1642,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.044622,-79.035162
+4deaa901550d,vivienda,Av. Indoamérica 543,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.095301,-79.020785
+555c516b52d5,vivienda,Calle San Agustín 938,Huamachuco,Sánchez Carrión,La Libertad,760aeddf19c4,-7.841146,-78.032236
+c50042883cde,vivienda,Av. España 1178,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.142668,-79.021584
+8e498fdb1f43,vivienda,Jr. Túpac Amaru 666,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.062091,-78.988278
+806dabba90ac,vivienda,Calle Elías Aguirre 777,Chiclayo,Chiclayo,Lambayeque,61da1bf96283,-6.789326,-79.863688
+19eca2eeeb8e,vivienda,Av. Victor Larco 1480,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.105669,-79.107658
+6873f738025e,vivienda,Calle Huaca del Sol 514,Moche,Trujillo,La Libertad,8bceb986968a,-8.134906,-79.013006
+d7f1c51b863d,vivienda,Av. Chepén 488,Chepén,Chepén,La Libertad,fda741b6147e,-7.229168,-79.430309
+4d113f8cf1fc,comercial,Calle Bolognesi 857,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.118771,-79.013583
+21ded5647c38,vivienda,Calle La Libertad 240,Ascope,Ascope,La Libertad,bd3feb573c75,-7.727713,-79.119957
+56855f813eaf,vivienda,Calle Micaela Bastidas 1137,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.097614,-79.045588
+e455bcf2c77a,vivienda,Av. El Porvenir 1376,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.040864,-78.978865
+79cd0397c1c9,vivienda,Av. Larco 1282,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.093937,-79.007089
+4d9173c76476,vivienda,Av. Moche 198,Moche,Trujillo,La Libertad,8bceb986968a,-8.178261,-78.967136
+2cce8f53ac33,vivienda,Av. Victor Larco 1831,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.052453,-79.126605
+cc8267be73eb,vivienda,Av. Victor Larco 754,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.095118,-79.146254
+297b00a3ced3,vivienda,Jr. Sucre 1621,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.101554,-79.008519
+d414738c4aa6,vivienda,Av. Primavera 217,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.077905,-79.048021
+8e8d01f21b62,vivienda,Av. Primavera 1983,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.045607,-79.025031
+8df0a85cb470,vivienda,Jr. Pizarro 1590,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.077101,-79.036186
+dc6bdacd937a,comercial,Av. Almagro 1196,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.089342,-79.029955
+6a00919a4983,vivienda,Calle Huaca del Sol 1885,Moche,Trujillo,La Libertad,8bceb986968a,-8.189297,-78.990932
+135964ae607c,vivienda,Calle Lima 1036,Piura,Piura,Piura,c22404a23524,-5.227221,-80.64349
+1c3957378e9e,vivienda,Calle San Pedro 1675,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.040028,-78.971679
+79c6d9aa21a3,vivienda,Av. Primavera 147,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.081132,-79.001155
+3a3344895aa1,vivienda,Av. Sánchez Cerro 481,Piura,Piura,Piura,c22404a23524,-5.226956,-80.609266
+7c352bc6930c,vivienda,Av. Pumacahua 216,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.10649,-78.988625
+ff10a8adb9ea,vivienda,Calle Micaela Bastidas 349,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.089287,-79.041495
+81a18d717dbd,vivienda,Calle San Pedro 1682,Pacasmayo,Pacasmayo,La Libertad,4ac75acc81a8,-7.37686,-79.584701
+37a3ed8f928d,vivienda,Av. Gonzales Cáceres 1456,Chepén,Chepén,La Libertad,fda741b6147e,-7.267649,-79.438839
+3efc712d3883,comercial,Av. Víctor Larco 1952,Víctor Larco Herrera,Trujillo,La Libertad,440e1c64c2df,-8.159162,-79.072943
+b78f6085c2ab,comercial,Av. Salaverry 707,Salaverry,Trujillo,La Libertad,e87377f7ccae,-8.224758,-78.969947
+f0e723ce6fc5,vivienda,Av. Pumacahua 934,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.063303,-78.98348
+effac7057b0a,vivienda,Av. Túpac Amaru 724,Comas,Lima,Lima,87779b42b12e,-11.940628,-77.040746
+953dac2049ed,vivienda,Jr. La Luna 588,Moche,Trujillo,La Libertad,8bceb986968a,-8.179554,-79.016746
+f5554202d85b,vivienda,Calle Los Laureles 626,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.066574,-79.049223
+c7ec92a8cdfa,vivienda,Calle Huaca Prieta 1959,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.064493,-79.127164
+c4be5aa52949,vivienda,Av. La Esperanza 1694,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.09137,-79.020166
+068113124ceb,comercial,Av. Grau 1063,Piura,Piura,Piura,c22404a23524,-5.229145,-80.599187
+f7e23665fd7a,vivienda,Av. Húsares de Junín 1662,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.115105,-79.037732
+44e735e55d34,vivienda,Jr. Los Pescadores 1533,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.053403,-79.14337
+a6e79d1932e1,vivienda,Calle Las Palmeras 294,Víctor Larco Herrera,Trujillo,La Libertad,440e1c64c2df,-8.110381,-79.057089
+71292fdecb8a,vivienda,Av. Laredo 595,Laredo,Trujillo,La Libertad,eabd6d0adfe1,-8.073821,-78.976329
+209eb76c68b2,vivienda,Jr. Bolognesi 1650,Otuzco,Otuzco,La Libertad,dbf65a307667,-7.887573,-78.558281
+ccf22d1a97bc,vivienda,Calle Bolognesi 1301,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.090036,-79.026153
+5d28f9144f6f,vivienda,Av. Túpac Amaru 481,Comas,Lima,Lima,87779b42b12e,-11.951074,-77.043203
+c2fa61ec1e08,vivienda,Av. España 600,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.094745,-79.06352
+dc9b945c6b03,vivienda,Jr. Bolívar 1397,Huamachuco,Sánchez Carrión,La Libertad,760aeddf19c4,-7.817962,-78.083653
+9e901e73d616,comercial,Av. Salaverry 1031,Salaverry,Trujillo,La Libertad,e87377f7ccae,-8.240374,-78.98615
+b397fe86c5cc,vivienda,Av. Primavera 1340,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.072877,-79.043724
+29864e772ba4,vivienda,Jr. Cahuide 819,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.041195,-79.000618
+4b4376e99e9c,vivienda,Jr. Sánchez Carrión 377,Huamachuco,Sánchez Carrión,La Libertad,760aeddf19c4,-7.782716,-78.054149
+cff703022784,vivienda,Calle La Unión 1493,Laredo,Trujillo,La Libertad,eabd6d0adfe1,-8.064792,-78.96542
+ee583edcb7ec,vivienda,Jr. Bolognesi 380,Ascope,Ascope,La Libertad,bd3feb573c75,-7.74453,-79.129765
+2982ee1740f4,vivienda,Calle Bolognesi 280,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.136427,-78.99889
+3a3cb25630f2,vivienda,Calle Bolognesi 1796,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.083901,-79.046194
+1e343b2b206a,vivienda,Av. La Marina 1671,Pacasmayo,Pacasmayo,La Libertad,4ac75acc81a8,-7.434462,-79.580601
+be914564d4ec,comercial,Av. Sánchez Cerro 546,Piura,Piura,Piura,c22404a23524,-5.223684,-80.615084
+b22e79e20caf,vivienda,Jr. Los Pescadores 1635,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.095892,-79.111324
+1989a6c90080,vivienda,Av. Progreso 1841,Santiago de Chuco,Santiago de Chuco,La Libertad,8be0a813f051,-8.12348,-78.187572
+069750cd3123,vivienda,Jr. San Martín 152,Santiago de Chuco,Santiago de Chuco,La Libertad,8be0a813f051,-8.124544,-78.184677
+b04ab7ed42c4,vivienda,Av. Los Chavimochic 1229,Virú,Virú,La Libertad,814b32ca3d8b,-8.407102,-78.766663
+22d8bbe174f1,vivienda,Calle Los Laureles 980,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.043339,-79.047029
+8f022c71832d,vivienda,Av. Otuzco 995,Otuzco,Otuzco,La Libertad,dbf65a307667,-7.896625,-78.5885
+45011d8ad707,vivienda,Av. Victor Larco 1427,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.068127,-79.134146
+fae6c1ba391d,vivienda,Calle San Pedro 1344,Pacasmayo,Pacasmayo,La Libertad,4ac75acc81a8,-7.417628,-79.55963
+4eb987984228,comercial,Av. Laredo 1082,Laredo,Trujillo,La Libertad,eabd6d0adfe1,-8.112952,-78.927681
+08152400596e,vivienda,Av. Sánchez Carrión 495,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.080144,-78.962742
+d8adec3b2fa0,vivienda,Jr. Junín 175,Chepén,Chepén,La Libertad,fda741b6147e,-7.248125,-79.402136
+a8da98c71656,vivienda,Jr. Independencia 677,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.139107,-79.024974
+663490b6d477,vivienda,Av. La Ribera 1112,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.075577,-79.125171
+691df81b7f09,vivienda,Jr. Huancavelica 530,Piura,Piura,Piura,c22404a23524,-5.161446,-80.665007
+6334323055cd,vivienda,Av. La Esperanza 1736,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.043893,-78.998916
+a9a2a80eff0e,vivienda,Jr. Santa Rosa 1223,Laredo,Trujillo,La Libertad,eabd6d0adfe1,-8.104034,-78.948371
+807c1e30d50b,vivienda,Av. Prolongación Unión 442,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.10281,-78.986766
+f585d153d08c,vivienda,Av. La Marina 188,Pacasmayo,Pacasmayo,La Libertad,4ac75acc81a8,-7.389692,-79.572937
+b6ad2eb1a631,vivienda,Calle San Pedro 1137,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.107212,-79.017767
+71b54ee245df,vivienda,Av. Indoamérica 1040,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.046054,-79.062769
+600d98fd005d,comercial,Jr. San Martín 415,Santiago de Chuco,Santiago de Chuco,La Libertad,8be0a813f051,-8.135858,-78.216421
+5a1b22dceedd,vivienda,Av. La Esperanza 1158,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.075204,-79.027162
+5b6bdf72e480,vivienda,Jr. Sucre 531,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.092385,-78.969929
+214e8dae7fc6,vivienda,Av. Perú 1277,Comas,Lima,Lima,87779b42b12e,-11.943228,-77.08385
+17a9a5f8258a,vivienda,Jr. Huancavelica 1693,Piura,Piura,Piura,c22404a23524,-5.160589,-80.635482
+5fd97d6e1c2b,vivienda,Calle Los Ángeles 1174,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.070704,-78.958831
+7c96f420290a,vivienda,Av. Primavera 1376,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.086006,-79.054709
+e0a877736e2e,vivienda,Av. Indoamérica 1886,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.079534,-79.01799
+1ae09478f46b,vivienda,Av. Progreso 1576,Santiago de Chuco,Santiago de Chuco,La Libertad,8be0a813f051,-8.114323,-78.161667
+05271e03ca7f,vivienda,Av. Víctor Larco 1110,Víctor Larco Herrera,Trujillo,La Libertad,440e1c64c2df,-8.167726,-79.078686
+ac32405963cc,vivienda,Calle Bolívar 1902,Santiago de Chuco,Santiago de Chuco,La Libertad,8be0a813f051,-8.158113,-78.216236
+f0dfca9c70ac,comercial,Av. La Esperanza 259,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.071964,-79.014888
+26eca7e4b742,vivienda,Jr. La Libertad 825,Otuzco,Otuzco,La Libertad,dbf65a307667,-7.921671,-78.594915
+1b6534dc2abf,vivienda,Calle Micaela Bastidas 1964,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.066558,-79.046982
+f425fc83c1ef,vivienda,Jr. La Luna 1991,Moche,Trujillo,La Libertad,8bceb986968a,-8.145194,-79.013041
+765c5a770389,vivienda,Av. Indoamérica 697,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.095948,-79.007159
+c06aec699497,comercial,Av. Nicolás de Piérola 1786,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.121223,-79.026291
+858c9788b8c4,vivienda,Av. Pumacahua 1672,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.044178,-79.0071
+dcf78b69f8b4,vivienda,Calle Huaca de la Luna 883,Moche,Trujillo,La Libertad,8bceb986968a,-8.17131,-79.016377
+a35b3aa8c361,comercial,Av. Almagro 1744,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.137506,-79.017752
+f8fc2c7812d0,vivienda,Jr. Huancavelica 1845,Piura,Piura,Piura,c22404a23524,-5.214965,-80.646218
+3690725fba84,vivienda,Jr. Túpac Amaru 651,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.057939,-78.967818
+102e4644d03e,vivienda,Calle Los Laureles 1750,La Esperanza,Trujillo,La Libertad,54775ecbe3c8,-8.093147,-79.017308
+237b8f41930b,vivienda,Calle Puerto 650,Salaverry,Trujillo,La Libertad,e87377f7ccae,-8.239829,-78.991649
+f92eb339e56d,vivienda,Calle San Agustín 1154,Huamachuco,Sánchez Carrión,La Libertad,760aeddf19c4,-7.783424,-78.092546
+517ce13fac04,vivienda,Calle San Agustín 1780,Huamachuco,Sánchez Carrión,La Libertad,760aeddf19c4,-7.827909,-78.04656
+ac8a7f65f191,comercial,Calle San Pedro 403,Pacasmayo,Pacasmayo,La Libertad,4ac75acc81a8,-7.427344,-79.582384
+5882ff84b698,vivienda,Av. Grau 1657,Piura,Piura,Piura,c22404a23524,-5.223504,-80.633781
+3d071391fbc7,vivienda,Av. La Marina 1866,Pacasmayo,Pacasmayo,La Libertad,4ac75acc81a8,-7.394328,-79.553817
+7d600b95322d,vivienda,Calle San José 465,Laredo,Trujillo,La Libertad,eabd6d0adfe1,-8.113632,-78.926536
+545ef8884b21,vivienda,Calle El Boquerón 1172,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.058626,-79.132917
+3e740aecc6e4,vivienda,Av. Victor Larco 1991,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.06963,-79.120802
+93e2e70026db,vivienda,Av. Larco 920,Trujillo,Trujillo,La Libertad,20f6ac5a38a3,-8.080726,-79.030259
+69a9b0917e76,vivienda,Calle Lima 1600,Piura,Piura,Piura,c22404a23524,-5.184581,-80.633458
+a3bad957bdaf,comercial,Jr. Junín 1824,Chepén,Chepén,La Libertad,fda741b6147e,-7.245459,-79.426765
+4d35b5cf871c,vivienda,Av. Gonzales Cáceres 1289,Chepén,Chepén,La Libertad,fda741b6147e,-7.242226,-79.400081
+c0000c8d1584,vivienda,Av. Prolongación Unión 1266,El Porvenir,Trujillo,La Libertad,e6a1033844ea,-8.089391,-78.967939
+242daa1a486e,vivienda,Calle San Pedro 273,Pacasmayo,Pacasmayo,La Libertad,4ac75acc81a8,-7.388651,-79.592673
+595bbf704cc5,vivienda,Av. Sánchez Cerro 257,Piura,Piura,Piura,c22404a23524,-5.188407,-80.615142
+0ec484eb0605,comercial,Jr. Lima 485,Pacasmayo,Pacasmayo,La Libertad,4ac75acc81a8,-7.379007,-79.535524
+40bb470a0af0,vivienda,Jr. Los Álamos 702,Comas,Lima,Lima,87779b42b12e,-11.931634,-77.065848
+62f37974bf41,comercial,Calle Huaca Prieta 977,Huanchaco,Trujillo,La Libertad,87b20f0f5fdc,-8.069103,-79.113578
+c3daed1f0f78,comercial,Calle San Cristóbal 1676,Otuzco,Otuzco,La Libertad,dbf65a307667,-7.919125,-78.575667

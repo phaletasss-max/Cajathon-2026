@@ -4,9 +4,9 @@ Prototipo para el hackathon Cajathon de Caja Trujillo. Identifica **relaciones
 inusuales** entre personas, negocios y solicitudes para **priorizar revisión
 humana**. No determina fraude, no rechaza créditos y no decide automáticamente.
 
-> **Fases 1–2 entregadas:** generador sintético con IDs opacos y anillos
-> inyectados, más el grafo bipartito y la proyección ponderada de solicitudes
-> con IDF suavizado, hubs de alta multiplicidad y evidencia citable.
+> **Fases 1–3 entregadas:** generador sintético con IDs opacos y anillos
+> inyectados, grafo bipartito y proyección ponderada, y motor no supervisado
+> de detección de redes con puntuación explicable.
 
 ## Datos
 
@@ -119,6 +119,32 @@ aristas bipartitas: 60425
 aristas de proyección: 19833
 tiempo de construcción: ~3,5 s
 ```
+
+## Fase 3 — Detección de redes de riesgo
+
+```bash
+python -m detection.engine --graph outputs/graph/graph.pkl --raw data/raw --output outputs/detection --threshold 60
+```
+
+El motor es no supervisado y no lee `data/ground_truth/`. Genera:
+
+- `outputs/detection/clusters.csv` — comunidades de riesgo con puntuación,
+  tamaño, densidad, evidencias y miembros.
+- `outputs/detection/application_scores.csv` — puntuación por solicitud,
+  cluster asignado, motivo principal y evidencia.
+- `outputs/detection/detection_meta.json` — configuración, conteos y tiempo.
+
+En la cartera de trabajo detecta 28 redes con 259 solicitudes, todas las
+redes son puras y la precisión en el Top 259 es 1,0.
+
+Evaluación offline (solo aquí se usa la verdad terreno):
+
+```bash
+python -m eval.evaluate --detection outputs/detection --truth data/ground_truth --output outputs/eval
+```
+
+Resultados de referencia: AP 0,9927, AUC 0,9926, 28 clusters puros y
+259/261 anillos capturados.
 
 ## Pruebas
 

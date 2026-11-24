@@ -32,6 +32,19 @@ def _read_json(name: str, subdir: str = "") -> dict[str, Any] | list[Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+@app.get("/")
+def root() -> dict[str, Any]:
+    return {
+        "service": "RIE-02",
+        "status": "ok",
+        "docs": "/docs",
+        "health": "/health",
+        "clusters": "/clusters",
+        "applications": "/applications",
+        "metrics": "/metrics",
+    }
+
+
 @app.get("/health")
 def health() -> dict[str, str]:
     return {"status": "ok", "service": "RIE-02"}

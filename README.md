@@ -4,9 +4,8 @@ Prototipo para el hackathon Cajathon de Caja Trujillo. Identifica **relaciones
 inusuales** entre personas, negocios y solicitudes para **priorizar revisión
 humana**. No determina fraude, no rechaza créditos y no decide automáticamente.
 
-> **Fases 1–4 entregadas:** generador sintético, grafo bipartito y proyección,
-> motor no supervisado de detección y expedientes explicables con evidencia
-> citable y datos enmascarados.
+> **Fases 1–5 entregadas:** generador, grafo, detección, expedientes explicables
+> y flujo de revisión humana con decisiones auditables.
 
 ## Datos
 
@@ -162,6 +161,19 @@ Genera un expediente por red detectada:
 
 Los documentos, teléfonos y huellas se enmascaran; la evidencia usa hashes de
 16 caracteres y pesos, por lo que puede citarse sin exponer valores crudos.
+
+## Fase 5 — Revisión humana
+
+```bash
+python -m review.workflow --register outputs/explain/risk_register.csv --output outputs/review --limit 10
+python -m review.workflow --register outputs/explain/risk_register.csv --output outputs/review --decide C00001 --decision confirmado --reviewer "analista1" --notes "Red confirmada"
+python -m review.workflow --register outputs/explain/risk_register.csv --output outputs/review --export
+```
+
+Mantiene una cola de alertas y un registro auditable en
+`outputs/review/decisions.jsonl`, y exporta `reviewed_alerts.csv` con la
+decisión, revisor, fecha y notas. Decisiones válidas: `pendiente`,
+`confirmado`, `descartado`, `falso_positivo`.
 
 ## Pruebas
 

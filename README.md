@@ -4,9 +4,9 @@ Prototipo para el hackathon Cajathon de Caja Trujillo. Identifica **relaciones
 inusuales** entre personas, negocios y solicitudes para **priorizar revisión
 humana**. No determina fraude, no rechaza créditos y no decide automáticamente.
 
-> **Fase 1 entregada:** estructura, generador sintético con población legítima,
-> anillos inyectados, IDs opacos, dificultad configurable y datos locales de
-> Trujillo/La Libertad.
+> **Fases 1–2 entregadas:** generador sintético con IDs opacos y anillos
+> inyectados, más el grafo bipartito y la proyección ponderada de solicitudes
+> con IDF suavizado, hubs de alta multiplicidad y evidencia citable.
 
 ## Datos
 
@@ -71,6 +71,55 @@ mantienen una media de ~1,9 referencias por solicitud, similar a la población
 legítima. Una parte de los anillos usa una dirección de mercado legítima como
 cobertura.
 
+## Fase 2 — Grafo de riesgo
+
+```bash
+python -m graph.builder --input data/raw --output outputs/graph --k 25
+```
+
+`--k` es el umbral de multiplicidad (por defecto `25`). El comando lee solo las
+tablas públicas y escribe:
+
+- `outputs/graph/graph.graphml` — grafo bipartito entidad ↔ atributo.
+- `outputs/graph/projection.graphml` — proyección entre solicitudes.
+- `outputs/graph/graph.pkl` — ambas capas y tablas planas para reutilizarlas.
+- `outputs/graph/graph_edges.csv` — aristas con peso, evidencia y ventana
+  temporal; incluye una columna `graph_layer` (`bipartite` / `projection`).
+- `outputs/graph/graph_nodes.csv` y `graph_attributes.csv`.
+- `outputs/graph/graph_meta.json` — configuración, conteos y tiempo.
+
+### Modelo de pesos
+
+Cada atributo (teléfono, dispositivo, dirección, referencia o geocelda) recibe
+un IDF suavizado `w = log((N + 1) / (df + 1))`, donde `N` es el total de
+entidades de la izquierda (solicitudes + personas + negocios) y `df` su
+frecuencia sobre esas entidades. El peso se limita con un tope por tipo para
+que un atributo casi único no domine la agregación.
+
+Un atributo compartido por **más de K entidades** se marca
+`high_multiplicity` (y `multiplicity_label = "alta_multiplicidad"`) y no genera
+todas las parejas de solicitudes. En la proyección se representa con un nodo
+`hub:...`; cada solicitud se conecta al hub, de modo que el número de aristas
+crece de forma lineal. Esto evita la explosión cuadrática de geoceldas y
+direcciones de mercados.
+
+Cada arista guarda `evidence_json` con la lista de atributos que la originan
+(`type`, `value_hash` de 16 caracteres y `weight`) y las fechas mínima y máxima
+de las solicitudes conectadas (`min_created_at`, `max_created_at`,
+`span_hours`). La Fase 4 podrá citar esa evidencia exacta en un expediente.
+
+Ejemplo de ejecución con la cartera de 5.000 solicitudes:
+
+```text
+n_applications: 5261
+n_entities: 12607
+n_attributes: 18096
+atributos de alta multiplicidad: 24
+aristas bipartitas: 60425
+aristas de proyección: 19833
+tiempo de construcción: ~3,5 s
+```
+
 ## Pruebas
 
 ```bash
@@ -80,6 +129,11 @@ pytest
 Incluye pruebas de integridad referencial, determinismo, formato de DNI,
 distribución local de direcciones, prevalencia, referencias circulares y
 **opacidad de IDs**: los anillos no se separan por prefijo ni por posición.
+
+Las pruebas de la Fase 2 verifican que un teléfono compartido por 2 personas
+pese más que una dirección compartida por 40, que la dirección se represente
+con hub sin clique, que la evidencia y las fechas se exporten, y que la
+construcción con 5.000 solicitudes termine en menos de 30 segundos.
 
 ## Privacidad
 

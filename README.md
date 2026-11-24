@@ -4,8 +4,8 @@ Prototipo para el hackathon Cajathon de Caja Trujillo. Identifica **relaciones
 inusuales** entre personas, negocios y solicitudes para **priorizar revisión
 humana**. No determina fraude, no rechaza créditos y no decide automáticamente.
 
-> **Fases 1–8 entregadas:** generador, grafo, detección, expedientes, revisión
-> humana, API HTTP, interfaz Streamlit y benchmark por dificultad.
+> **Fases 1–9 entregadas:** pipeline completo reproducible, desde datos sintéticos
+> hasta expedientes, revisión, API, UI y benchmark.
 
 ## Datos
 
@@ -225,6 +225,15 @@ Resultados de referencia (1.000 personas):
 | medium | 1,0000 | 1,0000 | 46/46 |
 | hard | 0,8226 | 0,8393 | 38/47 |
 | hard (baja prevalencia) | 0,8226 | 0,8393 | 38/47 |
+
+## Fase 9 — Pipeline completo
+
+```bash
+python scripts/run_pipeline.py --n-legit 5000 --rings 25 --seed 42 --difficulty medium
+```
+
+Ejecuta en secuencia: generación, grafo, detección, expedientes y evaluación.
+Escribe `outputs/pipeline_meta.json` con tiempos y conteos.
 
 ## Pruebas
 

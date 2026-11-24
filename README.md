@@ -4,8 +4,8 @@ Prototipo para el hackathon Cajathon de Caja Trujillo. Identifica **relaciones
 inusuales** entre personas, negocios y solicitudes para **priorizar revisión
 humana**. No determina fraude, no rechaza créditos y no decide automáticamente.
 
-> **Fases 1–6 entregadas:** generador, grafo, detección, expedientes, revisión
-> humana y API HTTP para consumo de resultados.
+> **Fases 1–7 entregadas:** generador, grafo, detección, expedientes, revisión
+> humana, API HTTP e interfaz Streamlit.
 
 ## Datos
 
@@ -197,6 +197,16 @@ Ejemplo:
 ```bash
 curl http://127.0.0.1:8000/clusters?min_score=60
 ```
+
+## Fase 7 — Interfaz de revisión
+
+```bash
+streamlit run ui/app.py
+```
+
+La interfaz muestra redes detectadas, expedientes, solicitudes en riesgo y
+permite registrar decisiones humanas (`confirmado`, `descartado`,
+`falso_positivo`) con revisor y notas.
 
 ## Pruebas
 

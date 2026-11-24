@@ -22,6 +22,8 @@ prefijo de un ID delaten a un anillo.
 python -m venv .venv
 .venv\Scripts\activate          # Windows
 pip install -r requirements.txt
+# Opcional, solo para la interfaz Streamlit:
+pip install -r requirements-full.txt
 ```
 
 ## Generar el dataset

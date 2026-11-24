@@ -7,7 +7,42 @@ from typing import Any
 
 import numpy as np
 import pandas as pd
-from sklearn.metrics import average_precision_score, roc_auc_score
+
+
+def _average_precision_score(y_true: np.ndarray, y_score: np.ndarray) -> float:
+    y_true = np.asarray(y_true).astype(int)
+    y_score = np.asarray(y_score, dtype=float)
+    positives = int(y_true.sum())
+    if positives == 0:
+        return 0.0
+    order = np.argsort(-y_score, kind="mergesort")
+    y_sorted = y_true[order]
+    true_positions = np.flatnonzero(y_sorted == 1)
+    precision_at = (np.arange(len(true_positions)) + 1) / (true_positions + 1)
+    return float(precision_at.mean())
+
+
+def _roc_auc_score(y_true: np.ndarray, y_score: np.ndarray) -> float | None:
+    y_true = np.asarray(y_true).astype(int)
+    y_score = np.asarray(y_score, dtype=float)
+    positives = int(y_true.sum())
+    negatives = int(len(y_true) - positives)
+    if positives == 0 or negatives == 0:
+        return None
+
+    order = np.argsort(y_score, kind="mergesort")
+    ranks = np.empty(len(y_score), dtype=float)
+    i = 0
+    while i < len(y_score):
+        j = i
+        while j + 1 < len(y_score) and y_score[order[j + 1]] == y_score[order[i]]:
+            j += 1
+        average_rank = (i + j) / 2.0 + 1.0
+        for k in range(i, j + 1):
+            ranks[order[k]] = average_rank
+        i = j + 1
+    sum_pos_ranks = float(ranks[y_true == 1].sum())
+    return (sum_pos_ranks - positives * (positives + 1) / 2.0) / (positives * negatives)
 
 
 def application_metrics(scores: pd.DataFrame, truth: pd.DataFrame) -> dict[str, Any]:
@@ -24,12 +59,10 @@ def application_metrics(scores: pd.DataFrame, truth: pd.DataFrame) -> dict[str, 
     metrics: dict[str, Any] = {
         "n_applications": int(len(merged)),
         "n_rings": int(y_true.sum()),
-        "average_precision": round(float(average_precision_score(y_true, y_score)), 4),
+        "average_precision": round(float(_average_precision_score(y_true, y_score)), 4),
     }
-    try:
-        metrics["roc_auc"] = round(float(roc_auc_score(y_true, y_score)), 4)
-    except ValueError:
-        metrics["roc_auc"] = None
+    auc = _roc_auc_score(y_true, y_score)
+    metrics["roc_auc"] = round(float(auc), 4) if auc is not None else None
 
     ranked = merged.sort_values("risk_score", ascending=False).reset_index(drop=True)
     for k in (25, 50, 100, 200, 259, 500):

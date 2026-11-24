@@ -4,9 +4,9 @@ Prototipo para el hackathon Cajathon de Caja Trujillo. Identifica **relaciones
 inusuales** entre personas, negocios y solicitudes para **priorizar revisión
 humana**. No determina fraude, no rechaza créditos y no decide automáticamente.
 
-> **Fases 1–3 entregadas:** generador sintético con IDs opacos y anillos
-> inyectados, grafo bipartito y proyección ponderada, y motor no supervisado
-> de detección de redes con puntuación explicable.
+> **Fases 1–4 entregadas:** generador sintético, grafo bipartito y proyección,
+> motor no supervisado de detección y expedientes explicables con evidencia
+> citable y datos enmascarados.
 
 ## Datos
 
@@ -145,6 +145,23 @@ python -m eval.evaluate --detection outputs/detection --truth data/ground_truth 
 
 Resultados de referencia: AP 0,9927, AUC 0,9926, 28 clusters puros y
 259/261 anillos capturados.
+
+## Fase 4 — Expedientes explicables
+
+```bash
+python -m explain.dossier --detection outputs/detection --graph outputs/graph/graph.pkl --raw data/raw --output outputs/explain --top 28
+```
+
+Genera un expediente por red detectada:
+
+- `outputs/explain/dossiers.json` — estructura completa con motivos, ventana
+  temporal, atributos compartidos, contexto del grafo y miembros enmascarados.
+- `outputs/explain/dossier_C*.md` — expediente legible para revisión humana.
+- `outputs/explain/risk_register.csv` — registro resumido de redes.
+- `outputs/explain/explain_meta.json` — metadatos.
+
+Los documentos, teléfonos y huellas se enmascaran; la evidencia usa hashes de
+16 caracteres y pesos, por lo que puede citarse sin exponer valores crudos.
 
 ## Pruebas
 

@@ -95,4 +95,3 @@ if not register.empty:
             st.success("Decisión registrada")
         except Exception as exc:  # noqa: BLE001
             st.error(str(exc))
-PY

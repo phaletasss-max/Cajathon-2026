@@ -11,8 +11,9 @@ from fastapi.responses import HTMLResponse, JSONResponse
 import pandas as pd
 
 from review.workflow import record_decision
+from api.landing import LANDING_HTML
 
-app = FastAPI(title="RIE-02", version="0.3.0", description="Detección de redes de riesgo en microfinanzas")
+app = FastAPI(title="RedRiesgo", version="0.4.0", description="Inteligencia de Grafos para Detección Temprana de Redes de Fraude (RIE-02)")
 
 _env = __import__("os").environ.get("RIE_OUTPUT_DIR")
 BASE_DIR = Path(_env) if _env else (Path("outputs") if (Path("outputs") / "detection" / "clusters.csv").exists() else Path("sample_outputs"))
@@ -34,41 +35,7 @@ def _read_json(name: str, subdir: str = "") -> dict[str, Any] | list[Any]:
 
 @app.get("/", response_class=HTMLResponse)
 def root() -> str:
-    return """<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RIE-02 — Detección de redes de riesgo</title>
-  <style>
-    body { font-family: system-ui, sans-serif; margin: 2rem; max-width: 960px; }
-    h1 { margin-bottom: .25rem; }
-    .card { border: 1px solid #ddd; border-radius: 12px; padding: 1rem; margin: 1rem 0; }
-    a { color: #0b5fff; text-decoration: none; }
-    code { background: #f3f3f3; padding: .15rem .35rem; border-radius: 4px; }
-  </style>
-</head>
-<body>
-  <h1>RIE-02</h1>
-  <p>Detección de redes de riesgo en microfinanzas peruanas. Prioriza revisión humana; no determina fraude.</p>
-  <div class="card">
-    <h2>Accesos</h2>
-    <ul>
-      <li><a href="/docs">Documentación interactiva (Swagger)</a></li>
-      <li><a href="/health">Estado del servicio</a></li>
-      <li><a href="/clusters">Redes detectadas (JSON)</a></li>
-      <li><a href="/applications">Solicitudes puntuadas (JSON)</a></li>
-      <li><a href="/metrics">Métricas de evaluación</a></li>
-    </ul>
-  </div>
-  <div class="card">
-    <h2>Comandos locales</h2>
-    <p><code>python scripts/run_pipeline.py --n-legit 5000 --rings 25 --seed 42 --difficulty medium</code></p>
-    <p><code>streamlit run ui/app.py</code></p>
-  </div>
-</body>
-</html>
-"""
+    return LANDING_HTML
 
 
 @app.get("/health")

@@ -234,8 +234,10 @@ def _score(features: dict[str, Any], source: str) -> float:
     size_ok = 1.0 if 3 <= size <= 30 else (0.5 if size <= 60 else 0.0)
     density = float(features["density"])
     evidence = (
-        features["phone_edges"] + features["device_edges"] + features["reference_edges"]
-        + features["address_edges"] * (1 if features["burst_72h"] >= 5 else 0)
+        features["phone_edges"]
+        + features["device_edges"] * 1.25
+        + features["reference_edges"] * 1.15
+        + features["address_edges"] * (1.0 if features["burst_72h"] >= 5 else (0.65 if features["burst_72h"] >= 3 or density >= 0.7 else 0.0))
     )
     evidence_per_node = evidence / max(size - 1, 1)
     burst_ratio = features["burst_72h"] / max(size, 1)
@@ -275,6 +277,24 @@ def _candidate_clusters(context: dict[str, Any], config: DetectionConfig) -> lis
         if config.min_cluster_size <= len(members) <= config.max_cluster_size:
             features = _community_features(members, context, "louvain")
             candidates.append((members, features, "louvain"))
+        elif len(members) > config.max_cluster_size:
+            sub = simple.subgraph(members)
+            try:
+                sub_comms = nx.community.louvain_communities(
+                    sub, weight="weight", resolution=max(config.resolution * 2.5, 2.5), seed=config.seed
+                )
+            except Exception:
+                sub_comms = []
+            for sub_comm in sub_comms:
+                sub_members = set(sub_comm) & members
+                if config.min_cluster_size <= len(sub_members) <= config.max_cluster_size:
+                    features = _community_features(sub_members, context, "louvain_sub")
+                    if (
+                        features["device_edges"] + features["phone_edges"] >= 2
+                        or features["burst_72h"] >= 4
+                        or features["far_applications"] >= 2
+                    ):
+                        candidates.append((sub_members, features, "louvain_sub"))
 
     # Ciclos cerrados de referencias: SCCs pequeñas del grafo dirigido persona -> referencia.
     raw = context["raw"]

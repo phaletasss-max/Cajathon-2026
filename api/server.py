@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 import pandas as pd
 
 from review.workflow import record_decision
@@ -36,6 +36,14 @@ def _read_json(name: str, subdir: str = "") -> dict[str, Any] | list[Any]:
 @app.get("/", response_class=HTMLResponse)
 def root() -> str:
     return LANDING_HTML
+
+
+@app.get("/logo.jpg")
+def logo() -> FileResponse:
+    logo_path = Path("assets/redriesgo-logo.jpg")
+    if not logo_path.exists():
+        raise HTTPException(status_code=404, detail="logo no encontrado")
+    return FileResponse(logo_path, media_type="image/jpeg")
 
 
 @app.get("/health")

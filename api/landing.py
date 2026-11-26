@@ -131,7 +131,7 @@ LANDING_HTML = """<!DOCTYPE html>
   <div class="container">
     <header>
       <div class="brand">
-        <div class="logo-badge">RR</div>
+        <img src="/logo.jpg" alt="RedRiesgo" style="height:48px;border-radius:10px;background:#fff;padding:2px;">
         <div>
           <h1>RedRiesgo</h1>
           <p>Inteligencia de Grafos para Detección Temprana de Redes de Fraude · RIE-02</p>

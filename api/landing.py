@@ -7,6 +7,7 @@ LANDING_HTML = r"""<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="RedRiesgo conecta señales dispersas para priorizar la revisión humana en microfinanzas.">
 <title>RedRiesgo · Redes de riesgo en microfinanzas</title>
+<link rel="icon" href="/logo.jpg" type="image/jpeg">
 <script>
   try {
     document.documentElement.dataset.theme = localStorage.getItem('redriesgo-theme')
@@ -43,7 +44,23 @@ LANDING_HTML = r"""<!doctype html>
   .nav { display:flex; justify-content:space-between; align-items:center; gap:18px; padding-block:20px; }
   header { border-bottom:1px solid var(--line); }
   .wordmark { text-decoration:none; font-weight:800; font-size:1.25rem; display:inline-flex; align-items:center; gap:10px; }
-  .mark { display:grid; place-items:center; height:34px; width:34px; border-radius:11px; background:var(--button); color:var(--on-button); font-size:1rem; }
+  .brand-logo { display:block; width:106px; height:auto; border:1px solid var(--line); border-radius:10px; }
+  .materials,.outcomes { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:24px; }
+  .material { margin:0; overflow:hidden; border:1px solid var(--line); border-radius:18px; background:var(--paper); }
+  .material img { display:block; width:100%; height:auto; }
+  .material figcaption { padding:12px 16px; font-weight:700; }
+  .evidence,.review { margin-top:16px; border:1px solid var(--line); border-radius:18px; background:var(--paper); padding:clamp(16px,3vw,24px); }
+  .evidence h3,.review h3 { margin-bottom:8px; }
+  .evidence ul { padding-left:20px; margin:8px 0; }
+  .evidence code { overflow-wrap:anywhere; }
+  .review form { display:flex; flex-wrap:wrap; align-items:end; gap:10px; margin-top:12px; }
+  .review label { display:grid; gap:5px; font-weight:700; }
+  .review select { padding:10px; border:1px solid var(--line); border-radius:10px; background:var(--paper); color:var(--ink); font:inherit; }
+  .review button:disabled { cursor:default; opacity:.55; }
+  .review-status { margin-top:8px; }
+  .evaluation { margin-block:16px; display:flex; flex-wrap:wrap; gap:10px; }
+  .evaluation span { border:1px solid var(--line); padding:8px 12px; border-radius:10px; background:var(--paper); }
+  @media (max-width:620px) { .materials,.outcomes { grid-template-columns:1fr; } }
   .nav-links,.actions,.case-options { display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
   .nav-links a { text-decoration:none; color:var(--muted); font-weight:700; font-size:.88rem; margin-right:12px; }
   .btn,.theme,.case { border:1px solid var(--line); border-radius:10px; background:var(--paper); color:var(--ink); padding:10px 15px; text-decoration:none; font-weight:700; }
@@ -84,9 +101,6 @@ LANDING_HTML = r"""<!doctype html>
   .case-card dt { color:var(--muted); font-size:.79rem; }
   .case-card dd { margin:0; font-size:1.15rem; font-weight:800; }
   .case-card .question { color:var(--ink); border-left:3px solid var(--edge); padding-left:12px; }
-  details { margin-top:24px; }
-  summary { cursor:pointer; font-weight:700; color:var(--brand); }
-  details img { display:block; width:min(100%,860px); height:auto; margin-top:16px; border-radius:14px; }
   footer { border-top:1px solid var(--line); }
   .footer { padding-block:22px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px 24px; color:var(--muted); font-size:.9rem; }
   @media (max-width:820px) { .hero,.demo-grid { grid-template-columns:1fr; } }
@@ -102,7 +116,7 @@ LANDING_HTML = r"""<!doctype html>
 <body>
 <header>
   <nav class="wrap nav" aria-label="Navegación principal">
-    <a class="wordmark" href="#" aria-label="RedRiesgo, inicio"><span class="mark" aria-hidden="true">R</span>RedRiesgo</a>
+    <a class="wordmark" href="#" aria-label="RedRiesgo, inicio"><img class="brand-logo" src="/logo.jpg" width="1024" height="682" alt="RedRiesgo"></a>
     <div class="nav-links">
       <a href="#como-funciona">Cómo funciona</a>
       <a href="#demo">Demostración</a>
@@ -113,7 +127,7 @@ LANDING_HTML = r"""<!doctype html>
 <main>
   <section class="wrap hero" aria-labelledby="title">
     <div>
-      <p class="eyebrow">CAJATHON 2026 · Desafío RIE-02</p>
+      <p class="eyebrow">CAJATHON 2026 · RIE-02 · Caja Trujillo</p>
       <h1 id="title">El riesgo aparece <em>en las conexiones.</em></h1>
       <p class="lede">RedRiesgo conecta solicitudes de microcrédito que comparten datos, identifica patrones inusuales y prepara evidencia para que un analista decida qué investigar.</p>
       <div class="actions">
@@ -135,26 +149,31 @@ LANDING_HTML = r"""<!doctype html>
 
   <section class="section" id="como-funciona">
     <div class="wrap">
-      <p class="eyebrow">Cómo funciona</p>
-      <h2>De solicitudes aisladas a evidencia revisable</h2>
+      <p class="eyebrow">Descubrir redes de riesgo ocultas</p>
+      <h2>De solicitudes aisladas a evidencia revisable</h2><p class="intro">El reto de Caja Trujillo es detectar relaciones inusuales entre personas, negocios y créditos para orientar la prevención y la investigación. Compartir un dato puede tener una explicación legítima, como operar en el mismo mercado.</p>
       <div class="steps">
-        <article class="step"><h3>Conecta los datos</h3><p>Agrupa solicitudes por coincidencias en teléfonos, dispositivos, direcciones y referencias. Los identificadores se tokenizan.</p></article>
-        <article class="step"><h3>Pondera las coincidencias</h3><p>Un atributo frecuente, como la ubicación de un mercado, recibe menos peso. Una coincidencia poco común combinada con una ráfaga de solicitudes merece más atención.</p></article>
+        <article class="step"><h3>Construye el grafo</h3><p>Conecta personas, negocios y solicitudes con teléfonos, dispositivos, direcciones, referencias y geoceldas. Los identificadores se tokenizan antes del análisis.</p></article>
+        <article class="step"><h3>Detecta y prioriza</h3><p>La ponderación por frecuencia inversa (IDF) reduce el peso de coincidencias comunes. El motor combina esa información con comunidades, ciclos de referencias y concentraciones temporales.</p></article>
         <article class="step"><h3>Prepara el expediente</h3><p>Reúne las señales y las solicitudes vinculadas. El analista revisa la evidencia y decide si corresponde investigar más. La decisión crediticia queda a cargo de la entidad.</p></article>
       </div>
-      <details><summary>Ver la arquitectura del prototipo</summary><img loading="lazy" src="/assets/arquitectura.jpg" alt="Diagrama del flujo de datos, detección y revisión de RedRiesgo"></details>
+      <div class="materials">
+        <figure class="material"><a href="/assets/arquitectura.jpg"><img loading="lazy" src="/assets/arquitectura.jpg" alt="Diagrama del flujo de datos, detección y revisión de RedRiesgo"></a><figcaption>Arquitectura del prototipo</figcaption></figure>
+        <figure class="material"><a href="/assets/patrones-grafos.jpg"><img loading="lazy" src="/assets/patrones-grafos.jpg" alt="Comparación entre hubs legítimos y redes de riesgo en microfinanzas"></a><figcaption>Patrones de grafos en microfinanzas</figcaption></figure>
+      </div>
     </div>
   </section>
 
   <section class="section demo" id="demo">
     <div class="wrap">
       <p class="eyebrow">Demostración guiada</p>
-      <h2>Explora tres señales de riesgo</h2>
-      <p class="intro">Cambia de caso para ver qué detectaría el sistema y qué pregunta podría hacerse el analista. Los casos proceden de la cartera sintética del prototipo.</p>
+      <h2>¿Qué merece una investigación?</h2>
+      <p class="intro">Cambia de caso para ver qué detectaría el sistema y qué pregunta podría hacerse el analista. Las alertas proceden de la cartera sintética del prototipo. El mercado es un ejemplo ilustrativo de una coincidencia legítima.</p>
       <div class="case-options" role="group" aria-label="Casos de demostración">
         <button class="case" type="button" aria-pressed="true" data-case="address">Dirección compartida</button>
         <button class="case" type="button" aria-pressed="false" data-case="reference">Ciclo de referencias</button>
         <button class="case" type="button" aria-pressed="false" data-case="phone">Teléfono compartido</button>
+        <button class="case" type="button" aria-pressed="false" data-case="device">Dispositivo compartido</button>
+        <button class="case" type="button" aria-pressed="false" data-case="market">Mercado legítimo</button>
       </div>
       <div class="demo-grid">
         <div class="graph-card">
@@ -175,7 +194,40 @@ LANDING_HTML = r"""<!doctype html>
           <p class="question"><strong>Pregunta para revisión</strong><br><span id="case-question">¿Es un punto comercial que explica la coincidencia o hay otros vínculos entre los solicitantes?</span></p>
         </article>
       </div>
+      <section class="evidence" aria-labelledby="evidence-title">
+        <h3 id="evidence-title">Evidencia del expediente</h3>
+        <div id="case-evidence" aria-live="polite">Consultando el expediente de la API…</div>
+      </section>
+      <section class="review" aria-labelledby="review-title">
+        <h3 id="review-title">Ensaya la revisión humana</h3>
+        <p class="intro">La decisión de práctica se guarda en este navegador durante la sesión.</p>
+        <form id="review-demo">
+          <label>Resultado de revisión
+            <select id="demo-decision" required>
+              <option value="">Elige un resultado</option>
+              <option>En seguimiento</option>
+              <option>Escalar a investigación</option>
+              <option>Descartar como falso positivo</option>
+            </select>
+          </label>
+          <button class="btn primary" type="submit">Registrar en la demo</button>
+        </form>
+        <p id="demo-status" class="review-status" role="status">Pendiente de revisión</p>
+      </section>
       <noscript><p>Activa JavaScript para cambiar de caso o elegir otro tema.</p></noscript>
+    </div>
+  </section>
+  <section class="section" id="validacion">
+    <div class="wrap">
+      <p class="eyebrow">Validación del prototipo</p>
+      <h2>Medir la detección y los falsos positivos</h2>
+      <p class="intro">La muestra pública permite revisar los resultados del motor de grafos y sus expedientes. La propuesta contempla una prueba ampliada con más de 5.000 solicitudes sintéticas y una comparación de precisión, recall y falsos positivos frente a un modelo base.</p>
+      <div class="evaluation" id="evaluation" aria-live="polite"></div>
+      <div class="outcomes">
+        <article class="step"><h3>Prevenir antes</h3><p>El objetivo es detectar redes que pasan desapercibidas al revisar cada solicitud por separado y ordenar la investigación según la evidencia.</p></article>
+        <article class="step"><h3>Proteger al cliente</h3><p>El analista verifica explicaciones legítimas antes de escalar. La calibración inicial usa datos sintéticos y el prototipo opera fuera del core bancario.</p></article>
+      </div>
+      <div class="actions"><a class="btn" href="/metrics">Ver métricas de la muestra</a><a class="btn" href="/docs">Explorar la API del prototipo</a></div>
     </div>
   </section>
 </main>
@@ -210,9 +262,105 @@ LANDING_HTML = r"""<!doctype html>
       signal:'El teléfono compartido aparece en 21 conexiones dentro de la red de solicitudes.',
       question:'¿El número pertenece a un negocio que tramita solicitudes o se reutilizó como contacto personal?',
       alt:'Cuatro solicitudes enlazadas al mismo teléfono.'
+    },
+    device: {
+      id:'C00004', title:'Un dispositivo reutilizado', score:'72,07', count:8, hub:'Dispositivo',
+      signal:'La red reúne ocho solicitudes. El dispositivo compartido aparece en 12 conexiones.',
+      question:'¿El equipo pertenece a un canal de atención compartido o vincula solicitudes de personas que deberían operar por separado?',
+      alt:'Cuatro solicitudes enlazadas al mismo dispositivo.'
+    },
+    market: {
+      id:'', title:'Distintos negocios en un mercado', score:null, count:null, hub:'Mercado',
+      signal:'Varios negocios comparten la ubicación del mercado. El grafo trata esa concentración como un hub y reduce el peso de la coincidencia común.',
+      question:'¿Qué señal independiente, como un dispositivo reutilizado en poco tiempo, justificaría revisar este caso?',
+      alt:'Cuatro negocios comparten la ubicación de un mismo mercado.'
     }
   };
   let active = cases.address;
+  const evidencePanel = document.getElementById('case-evidence');
+  const reviewForm = document.getElementById('review-demo');
+  const reviewSelect = document.getElementById('demo-decision');
+  const reviewStatus = document.getElementById('demo-status');
+  const savedReviews = new Map();
+  const attributeLabels = {
+    address:'Dirección', phone:'Teléfono', reference:'Referencia',
+    device:'Dispositivo', geocell:'Zona geográfica'
+  };
+  const format = value => new Intl.NumberFormat('es-PE', {maximumFractionDigits:2}).format(value);
+  let evidenceRequest;
+  async function loadEvidence() {
+    evidenceRequest?.abort();
+    const id = active.id;
+    if (!id) {
+      evidencePanel.textContent = 'Ejemplo ilustrativo. La ubicación compartida recibe menos peso; una investigación requeriría señales adicionales.';
+      return;
+    }
+    const request = new AbortController();
+    evidenceRequest = request;
+    evidencePanel.textContent = 'Consultando el expediente de la API…';
+    try {
+      const response = await fetch('/clusters/' + encodeURIComponent(id), {signal:request.signal});
+      if (!response.ok) throw new Error();
+      const { dossier } = await response.json();
+      if (request.signal.aborted) return;
+      const attributes = dossier?.shared_attributes;
+      if (!Array.isArray(attributes) || !attributes.length) {
+        evidencePanel.textContent = 'El expediente no contiene atributos compartidos.';
+        return;
+      }
+      const description = document.createElement('p');
+      const span = dossier.time_window?.span_hours;
+      description.textContent = span == null ? 'Atributos tokenizados' : 'Ventana observada de ' + format(span) + ' horas';
+      const list = document.createElement('ul');
+      for (const entry of attributes) {
+        const item = document.createElement('li');
+        const token = document.createElement('code');
+        token.textContent = entry.value_hash;
+        item.append((attributeLabels[entry.type] ?? entry.type) + ' · ', token, ' · peso ' + format(entry.weight));
+        list.append(item);
+      }
+      evidencePanel.replaceChildren(description, list);
+    } catch {
+      if (!request.signal.aborted) evidencePanel.textContent = 'El expediente no está disponible en este momento.';
+    }
+  }
+  async function loadEvaluation() {
+    try {
+      const response = await fetch('/metrics');
+      if (!response.ok) return;
+      const { application, cluster } = await response.json();
+      const metrics = [
+        ['Solicitudes evaluadas', application?.n_applications],
+        ['Clústeres detectados', cluster?.n_clusters],
+        ['Precisión promedio', application?.average_precision],
+        ['Recall de miembros', cluster?.ring_recall]
+      ];
+      for (const [label, value] of metrics) {
+        if (!Number.isFinite(value)) continue;
+        const item = document.createElement('span');
+        item.textContent = label + ' · ' + format(value);
+        document.getElementById('evaluation').append(item);
+      }
+    } catch {}
+  }
+  function syncReview() {
+    const key = active.id || 'market';
+    let saved = savedReviews.get(key);
+    if (!saved) {
+      try { saved = sessionStorage.getItem('redriesgo-review-' + key); } catch {}
+    }
+    reviewSelect.value = saved || '';
+    reviewStatus.textContent = saved ? 'Resultado de práctica · ' + saved : 'Pendiente de revisión';
+  }
+  reviewForm.addEventListener('submit', event => {
+    event.preventDefault();
+    const key = active.id || 'market';
+    const value = reviewSelect.value;
+    if (!value) return;
+    savedReviews.set(key, value);
+    try { sessionStorage.setItem('redriesgo-review-' + key, value); } catch {}
+    syncReview();
+  });
   function draw(container, cycle = false) {
     const canvas = container.querySelector('canvas');
     const ctx = canvas.getContext('2d');
@@ -265,21 +413,23 @@ LANDING_HTML = r"""<!doctype html>
     option.addEventListener('click', () => {
       active = cases[option.dataset.case];
       for (const item of options) item.setAttribute('aria-pressed', String(item === option));
-      document.getElementById('case-id').textContent = 'Caso ' + active.id;
+      document.getElementById('case-id').textContent = active.id ? 'Caso ' + active.id : 'Ejemplo ilustrativo';
       document.getElementById('case-title').textContent = active.title;
       document.getElementById('case-signal').textContent = active.signal;
-      document.getElementById('case-score').textContent = active.score + ' / 100';
-      document.getElementById('case-count').textContent = active.count;
+      document.getElementById('case-score').textContent = active.score ? active.score + ' / 100' : 'Sin puntuación';
+      document.getElementById('case-count').textContent = active.count ?? '—';
       document.getElementById('case-question').textContent = active.question;
       document.getElementById('graph-legend').textContent = active.hub
         ? 'El esquema muestra parte del patrón de la red.'
         : 'Las flechas representan referencias declaradas entre personas.';
       graph.setAttribute('aria-label', active.alt);
-      for (const [index,node] of nodes.slice(0,-1).entries()) node.textContent = (active.hub ? 'S' : 'P') + '0' + (index + 1);
+      for (const [index,node] of nodes.slice(0,-1).entries()) node.textContent = (active.id ? (active.hub ? 'S' : 'P') : 'N') + '0' + (index + 1);
       const hub = nodes.at(-1);
       hub.hidden = !active.hub;
       hub.style.display = active.hub ? '' : 'none';
       hub.textContent = active.hub;
+      syncReview();
+      loadEvidence();
       draw(graph, !active.hub);
     });
   }
@@ -287,6 +437,9 @@ LANDING_HTML = r"""<!doctype html>
   observer.observe(hero);
   observer.observe(graph);
   syncTheme();
+  syncReview();
+  loadEvidence();
+  loadEvaluation();
 </script>
 </body>
 </html>

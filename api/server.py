@@ -46,6 +46,17 @@ def logo() -> FileResponse:
     return FileResponse(logo_path, media_type="image/jpeg")
 
 
+@app.get("/assets/{filename}")
+def asset_file(filename: str) -> FileResponse:
+    allowed = {"redriesgo-logo.jpg", "arquitectura.jpg", "patrones-grafos.jpg"}
+    if filename not in allowed:
+        raise HTTPException(status_code=404, detail="recurso no encontrado")
+    path = Path("assets") / filename
+    if not path.exists():
+        raise HTTPException(status_code=404, detail="recurso no encontrado")
+    return FileResponse(path, media_type="image/jpeg")
+
+
 @app.get("/health")
 def health() -> dict[str, str]:
     return {"status": "ok", "service": "RIE-02"}

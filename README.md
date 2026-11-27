@@ -258,3 +258,28 @@ construcción con 5.000 solicitudes termine en menos de 30 segundos.
 - El motor no lee `data/ground_truth/`; solo `eval/` lo usa para medir.
 - No se debe interpretar una coincidencia de teléfono, dirección o referencia
   como evidencia de fraude.
+
+## Plataforma de demostración
+
+La portada enlaza a `/app`, con panel ejecutivo, bandeja, expedientes y bitácora.
+La bandeja usa los resultados exportados y suma los montos de las solicitudes por
+clúster. Configura `RIE_OUTPUT_DIR` y `RIE_RAW_DIR` juntos para consultar otra
+cartera. El botón **Ejecutar análisis** vuelve a procesar la muestra pública con
+el umbral de hubs seleccionado. Sus resultados se mantienen separados de los
+casos de referencia.
+
+La bitácora local escribe en `review/decisions.jsonl` dentro del directorio de
+resultados. `RIE_AUDIT_DIR` permite ubicarla en un directorio persistente
+independiente. En Vercel la vista de auditoría es de solo lectura hasta integrar
+un almacén durable.
+
+Para reproducir la validación publicada y la ablación sobre la muestra:
+
+```bash
+python -m eval.platform_benchmark
+```
+
+La regla base marca un teléfono o dispositivo compartido y el motor de grafos
+marca solicitudes con score de al menos 60. El tiempo de revisión es una
+estimación de dos minutos por solicitud alertada, independiente del tiempo
+medido de ejecución.

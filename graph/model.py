@@ -52,6 +52,7 @@ class GraphConfig:
     )
     salt: str = "rie02-fase2"
     include_hubs: bool = True
+    use_idf: bool = True
 
     def __post_init__(self) -> None:
         if self.max_multiplicity < 2:
@@ -92,7 +93,7 @@ def attribute_weight(
         raise ValueError("df debe ser >= 1")
     if n_entities < 1:
         raise ValueError("n_entities debe ser >= 1")
-    idf = math.log((n_entities + 1) / (df + 1))
+    idf = math.log((n_entities + 1) / (df + 1)) if config.use_idf else 1.0
     cap = config.weight_caps.get(attribute_type, FALLBACK_WEIGHT_CAP)
     return round(min(idf, cap), 6)
 

@@ -15,7 +15,7 @@ from typing import Any
 
 import pandas as pd
 
-VALID_DECISIONS = {"pendiente", "confirmado", "descartado", "falso_positivo"}
+VALID_DECISIONS = {"pendiente", "confirmado", "descartado", "falso_positivo", "en_seguimiento", "escalado"}
 
 
 def _load_register(path: Path) -> pd.DataFrame:

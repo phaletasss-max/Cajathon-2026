@@ -79,6 +79,8 @@ LANDING_HTML = r"""<!doctype html>
   .graph { position:relative; height:260px; isolation:isolate; background:radial-gradient(circle at center,var(--soft),transparent 75%),radial-gradient(var(--line) 1px,transparent 1px); background-size:auto,16px 16px; }
   .graph .node { position:absolute; translate:-50% -50%; z-index:1; display:grid; place-items:center; min-height:35px; min-width:42px; border:1px solid var(--line); border-radius:10px; padding:4px 7px; background:var(--paper); color:var(--muted); font-weight:800; font-size:.76rem; white-space:nowrap; }
   .graph .hub { background:var(--button); color:var(--on-button); padding:8px 11px; }
+  @keyframes pulse-ring { 0%,100% { box-shadow:0 0 0 3px transparent; } 50% { box-shadow:0 0 0 10px var(--shadow); } }
+  @media (prefers-reduced-motion:no-preference) { #hero-graph .hub { animation:pulse-ring 2.6s ease-in-out 3; } }
   .graph canvas { width:100%; height:100%; display:block; }
   .legend { padding:13px 19px; color:var(--muted); font-size:.83rem; border-top:1px solid var(--line); }
   .section { padding-block:clamp(48px,8vw,88px); border-top:1px solid var(--line); scroll-margin-top:16px; }
@@ -128,11 +130,11 @@ LANDING_HTML = r"""<!doctype html>
   <section class="wrap hero" aria-labelledby="title">
     <div>
       <p class="eyebrow">CAJATHON 2026 · RIE-02 · Caja Trujillo</p>
-      <h1 id="title">El riesgo aparece <em>en las conexiones.</em></h1>
+      <h1 id="title">El fraude se esconde <em>en las conexiones,</em> no en las solicitudes.</h1>
       <p class="lede">RedRiesgo conecta solicitudes de microcrédito que comparten datos, identifica patrones inusuales y prepara evidencia para que un analista decida qué investigar.</p>
       <div class="actions">
-        <a class="btn primary" href="#demo">Explorar la demo ↓</a>
-        <a class="btn" href="#como-funciona">Cómo funciona</a>
+        <a class="btn primary" href="/app">Abrir plataforma</a>
+        <a class="btn" href="/validacion">Ver validación</a>
       </div>
     </div>
     <div class="graph-card">
@@ -147,6 +149,7 @@ LANDING_HTML = r"""<!doctype html>
     </div>
   </section>
 
+<div class="wrap evaluation" id="live-stats" aria-live="polite"></div>
   <section class="section" id="como-funciona">
     <div class="wrap">
       <p class="eyebrow">Descubrir redes de riesgo ocultas</p>
@@ -234,7 +237,7 @@ LANDING_HTML = r"""<!doctype html>
 <footer>
   <div class="wrap footer">
     <span><strong>RedRiesgo</strong> · Prototipo con datos sintéticos para CAJATHON 2026</span>
-    <a href="/docs">Documentación de la API</a>
+    <a href="/app">Abrir plataforma</a><a href="/validacion">Benchmark</a><a href="/metodologia">Metodología</a><a href="/privacidad">Privacidad</a><a href="/docs">API</a>
   </div>
 </footer>
 <script>
@@ -440,6 +443,21 @@ LANDING_HTML = r"""<!doctype html>
   syncReview();
   loadEvidence();
   loadEvaluation();
+  fetch('/stats').then(response => response.json()).then(stats => {
+    const graph = stats.graph?.stats;
+    const detection = stats.detection?.stats;
+    for (const [label, value] of [
+      ['Solicitudes analizadas',graph?.n_applications],
+      ['Clústeres detectados',detection?.n_clusters],
+      ['Atributos tratados como hubs',graph?.n_high_multiplicity_attributes],
+      ['Tiempo de detección (s)',detection?.elapsed_seconds]
+    ]) {
+      if (!Number.isFinite(value)) continue;
+      const stat = document.createElement('span');
+      stat.textContent = label + ' · ' + format(value);
+      document.getElementById('live-stats').append(stat);
+    }
+  }).catch(() => {});
 </script>
 </body>
 </html>

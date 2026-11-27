@@ -19,6 +19,7 @@ class DetectionConfig:
     seed: int = 42
     top_evidence: int = 5
     max_clusters: int = 1000
+    use_temporal_score: bool = True
 
     def __post_init__(self) -> None:
         if not 0 <= self.threshold <= 100:

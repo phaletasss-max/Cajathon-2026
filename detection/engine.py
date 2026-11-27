@@ -229,7 +229,7 @@ def _community_features(members: set[str], context: dict[str, Any], source: str)
     }
 
 
-def _score(features: dict[str, Any], source: str) -> float:
+def score_components(features: dict[str, Any], source: str, use_temporal_score: bool = True) -> dict[str, float]:
     size = int(features["size"])
     size_ok = 1.0 if 3 <= size <= 30 else (0.5 if size <= 60 else 0.0)
     density = float(features["density"])
@@ -247,18 +247,25 @@ def _score(features: dict[str, Any], source: str) -> float:
     far_score = features["far_applications"] / max(size, 1)
     maxw = min(float(features["max_weight"]) / 12.0, 1.0)
     reference_ratio = min(features["reference_edges"] / max(size, 1), 1.0)
-    base = 100.0 * (
-        0.24 * size_ok + 0.19 * density + 0.14 * min(evidence_per_node, 2.0) / 2.0
-        + 0.14 * burst_ratio + 0.09 * time_score + 0.09 * multi_score
-        + 0.06 * far_score + 0.05 * maxw + 0.01 * reference_ratio
-    )
+    points = {
+        "Estructura": 24 * size_ok + 19 * density + 14 * min(evidence_per_node, 2.0) / 2.0,
+        "Tiempo": 14 * burst_ratio + 9 * time_score if use_temporal_score else 0.0,
+        "Personas y distancia": 9 * multi_score + 6 * far_score,
+        "Peso y referencias": 5 * maxw + reference_ratio,
+    }
+    base = sum(points.values())
     if source == "ref_scc":
         base = max(base, 75.0)
     if size <= 2:
         base = min(base, 45.0)
     if size > 40:
         base = min(base, 35.0)
-    return round(min(max(base, 0.0), 100.0), 2)
+    points["Ajustes"] = min(max(base, 0.0), 100.0) - sum(points.values())
+    return points
+
+
+def _score(features: dict[str, Any], source: str, config: DetectionConfig) -> float:
+    return round(sum(score_components(features, source, config.use_temporal_score).values()), 2)
 
 
 def _candidate_clusters(context: dict[str, Any], config: DetectionConfig) -> list[tuple[set[str], dict[str, Any], str]]:
@@ -325,7 +332,7 @@ def _candidate_clusters(context: dict[str, Any], config: DetectionConfig) -> lis
             candidates.append((members, features, "ref_scc"))
 
     # Deduplicación por Jaccard.
-    ordered = sorted(candidates, key=lambda item: -_score(item[1], item[2]))
+    ordered = sorted(candidates, key=lambda item: -_score(item[1], item[2], config))
     merged: list[tuple[set[str], dict[str, Any], str]] = []
     for members, features, source in ordered:
         duplicate = False
@@ -413,7 +420,7 @@ def run_detection(
     merged = _candidate_clusters(context, config)
     cluster_rows: list[dict[str, Any]] = []
     for index, (members, features, source) in enumerate(merged, start=1):
-        score = _score(features, source)
+        score = _score(features, source, config)
         if score < config.threshold:
             continue
         evidence = _top_evidence(members, context, config.top_evidence)
